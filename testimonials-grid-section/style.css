@@ -124,7 +124,15 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .card-big {
+  .card {
     grid-column: span 1;
+  }
+
+  .card-long {
+    grid-row: auto;
+  }
+
+  .card-white.card-small {
+    grid-row: auto;
   }
 }
