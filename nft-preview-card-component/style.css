@@ -14,7 +14,7 @@ body {
 }
 
 .card {
-  width: 32rem;
+  max-width: 32rem;
   margin: 10rem auto;
   padding: 2.4rem 0;
   display: flex;
@@ -152,7 +152,7 @@ a:hover strong {
   transition: all 0.3s;
 }
 
-@media (max-width: 37.5em) {
+/* @media (max-width: 37.5em) {
   .card {
     width: 37.5rem;
   }
@@ -161,4 +161,4 @@ a:hover strong {
     width: 27.5rem;
     height: 27.5rem;
   }
-}
+} */
