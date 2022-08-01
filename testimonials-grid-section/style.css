@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  font-size: 1.3rem;
+}
+
+.container {
+  max-width: 130rem;
+  margin: 10rem auto;
+  padding: 0 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  padding: 2.6rem 2.8rem 3.6rem 2.8rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.card-big {
+  grid-column: span 2;
+}
+
+.card-long {
+  grid-row: span 2;
+}
+
+.card-header {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.card-img img {
+  width: 3.2rem;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.card-owner .card-aside {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.card-desc {
+  font-size: 2.1rem;
+  line-height: 1.15;
+}
+
+.card-more-info {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.card-purple {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.card-white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card-white .card-info {
+  color: hsl(219, 29%, 14%);
+}
+
+.card-white .card-owner .card-aside {
+  color: hsla(219, 29%, 14%, 0.7);
+}
+
+.card-white .card-more-info {
+  color: hsla(219, 29%, 14%, 0.5);
+}
+
+.card-gray {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card-black {
+  background-color: hsl(219, 29%, 14%);
+}
