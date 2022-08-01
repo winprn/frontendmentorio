@@ -31,13 +31,7 @@ body {
   border-radius: 8px;
   padding: 2.6rem 2.8rem 3.6rem 2.8rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
-}
-
-.card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  color: hsl(0, 0%, 100%);
+  z-index: -5;
 }
 
 .card-big {
@@ -46,6 +40,20 @@ body {
 
 .card-long {
   grid-row: span 2;
+}
+
+.quotes {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  z-index: -1;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: hsl(0, 0%, 100%);
 }
 
 .card-header {
@@ -99,4 +107,18 @@ body {
 
 .card-black {
   background-color: hsl(219, 29%, 14%);
+}
+
+@media (max-width: 56em) {
+  .container {
+    margin-top: 5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-big {
+    grid-column: span 1;
+  }
 }
