@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(225, 100%, 94%);
+  background-image: url('./images/pattern-background-desktop.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.card {
+  max-width: 45rem;
+  margin: 10rem auto;
+  border-radius: 12px;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  gap: 5rem;
+}
+
+.card-img img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-content {
+  text-align: center;
+}
+
+h2 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.card-detail {
+  color: hsl(224, 23%, 55%);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0 8rem;
+}
+
+.card-plan {
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: auto;
+  padding: 2.4rem;
+  border-radius: 12px;
+  gap: 2rem;
+}
+
+.plan-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.plan-type {
+  color: hsl(223, 47%, 23%);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.plan-price {
+  color: hsl(224, 23%, 55%);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.plan-action:link,
+.plan-action:visited {
+  color: hsl(263, 75%, 54%);
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+
+.plan-action:hover,
+.plan-action:active {
+  text-decoration: none;
+  color: hsla(263, 75%, 54%, 0.75);
+}
+
+.card-checkout:link,
+.card-checkout:visited {
+  background-color: rgb(40, 18, 241);
+  border-radius: 12px;
+  width: 80%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 8px rgba(40, 18, 241, 0.3);
+  transition: all 0.3s;
+}
+
+.card-checkout p {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.card-checkout:hover {
+  background-color: rgba(40, 18, 241, 0.7);
+}
+
+.card-action {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-cancel {
+  width: 80%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
+  margin-bottom: 6rem;
+  transition: all 0.3s;
+}
+
+.card-cancel:hover {
+  color: black;
+}
+
+@media (max-width: 38em) {
+  body {
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    margin: 3rem auto;
+    max-width: 38rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .card-cancel {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 24em) {
+  .card-plan {
+    flex-direction: column;
+  }
+}
