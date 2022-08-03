@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: hsl(185, 75%, 39%);
+  width: 100%;
+  height: 100vh;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.background-left {
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/bg-pattern-top.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-15%, -30%);
+}
+
+.background-right {
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/bg-pattern-top.svg');
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  transform: translate(5%, 50%);
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  /* gap: 3rem; */
+  border-radius: 12px;
+  box-shadow: 0px 1.6rem 2.8rem rgba(0, 0, 0, 0.1);
+}
+
+.card-background img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-img img {
+  border-radius: 50%;
+  border: 6px solid #fff;
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+}
+
+.card-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid hsla(0, 0%, 70%, 0.7);
+}
+
+.main-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: hsl(229, 23%, 23%);
+}
+
+.age {
+  font-size: 1.8rem;
+}
+
+.place {
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+}
+
+p {
+  color: hsl(0, 0%, 59%);
+}
+
+.fame {
+  width: 100%;
+  margin-top: 2.8rem;
+  padding-bottom: 2.6rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fame-detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
