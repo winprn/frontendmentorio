@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card {
+  width: 60rem;
+  display: flex;
+}
+
+.product-img {
+  background-image: url('./images/image-product-desktop.jpg');
+  width: 50%;
+  background-size: cover;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.product-details {
+  background-color: #fff;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 50%;
+  padding: 3.2rem;
+  gap: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+p {
+  font-family: 'Montserrat';
+}
+
+.product-type {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: hsl(228, 12%, 48%, 0.5);
+}
+
+.product-name {
+  font-family: 'Fraunces';
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: hsl(212, 21%, 14%, 0.8);
+}
+
+.product-info {
+  color: hsl(228, 12%, 48%, 0.8);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.current-price {
+  font-family: 'Fraunces';
+  color: hsl(158, 36%, 37%);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.old-price {
+  color: hsl(228, 12%, 48%, 0.8);
+  font-size: 1.4rem;
+  text-decoration: line-through;
+}
+
+.product-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+  height: 5rem;
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.product-action:hover {
+  background-color: hsl(159, 37%, 32%);
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.add {
+  font-family: 'Montserrat';
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+@media (max-width: 43em) {
+  .product-card {
+    max-width: 35rem;
+    flex-direction: column;
+  }
+
+  .product-img {
+    background-image: url('./images/image-product-mobile.jpg');
+    width: 100%;
+    height: 24rem;
+    background-size: cover;
+    border-radius: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .product-details {
+    border-radius: 0;
+    gap: 1.8rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 100%;
+  }
+}
