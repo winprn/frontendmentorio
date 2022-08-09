@@ -38,15 +38,12 @@ for (let i = 0; i < inputs.length; ++i) {
       parent.removeChild(inputs[i].nextSibling);
     }
     if (inputs[i].value !== '') {
-      //   if (inputs[i].id === 'card-number') {
-      //     let currentGroup = getGroup(inputs[i].value);
-      //     console.log(currentGroup);
-      //     let final = '';
-      //     for (let j = currentGroup * 4; j < inputs[i].value.length; ++j) {
-      //       final += inputs[i].value[j];
-      //     }
-      //     group[currentGroup].innerText = final;
-      //   }
+      const tmpString = inputs[i].value.replace(/ /g,'');
+      if (tmpString.length % 4 === 0) {
+        // console.log('something');
+        displays[i].innerText += ' ';
+        inputs[i].value += ' ';
+      }
       displays[i].innerText = inputs[i].value;
     } else {
       displays[i].innerText = defaults[i];
