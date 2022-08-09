@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'DM Sans';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(27, 66%, 92%);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance {
+    /* height: 12rem; */
+    min-width: 35rem;
+    width: 60%;
+    max-width: 50rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3.2rem;
+    background-color: hsl(10, 79%, 65%);
+    margin-bottom: 2.6rem;
+}
+
+.balance .text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    color: #fff;
+}
+
+.text .intro {
+    font-size: 1.6rem;
+    opacity: 0.9;
+}
+
+.text .money {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.spending {
+    min-width: 35rem;
+    width: 60%;
+    max-width: 50rem;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.spending .overview {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.spending .chart {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2.8rem;
+    margin-bottom: 2.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* gap: 2.4rem; */
+}
+
+.chart .single-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.single-day .amount {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* position: absolute; */
+    background-color: hsl(25, 47%, 15%);
+    color: #fff;
+    margin-bottom: 0.4rem;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transform: translateY(-2rem);
+    transition: all 0.3s;
+}
+
+.single-day .amount.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(-0.6rem);
+}
+
+.single-day.current .column {
+    background-color: hsl(186, 34%, 60%);
+}
+
+.single-day .day {
+    font-size: 1.3rem;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+.chart .column {
+    cursor: pointer;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 4px;
+    width: 3rem;
+    height: 10rem;
+    transition: all 0.3s;
+}
+
+.chart .column.blur {
+    opacity: 0.5;
+}
+
+.summary {
+    justify-self: flex-end;
+}
+
+.summary .title {
+    font-size: 1.4rem;
+    opacity: 0.5;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .money {
+    font-size: 3.6rem;
+}
+
+.content .differ {
+    text-align: right;
+}
+
+.differ {
+    font-size: 1.3rem;
+}
+
+.differ .percent {
+    font-weight: 700;
+}
+
+.differ .time {
+    opacity: 0.5;
+}
+
+@media (max-width: 40.5em) {
+    .spending .chart {
+        justify-content: center;
+        gap: 1.6rem;
+    }
+
+    .single-day .amount {
+        display: none;
+    }
+}

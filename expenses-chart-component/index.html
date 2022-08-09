@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+<body>
+
+  <!-- My balance
+  $921.48
+
+  Spending - Last 7 days
+
+  mon
+  tue
+  wed
+  thu
+  fri
+  sat
+  sun
+
+  Total this month
+  $478.33
+
+  +2.4%
+  from last month -->
+
+  <main>
+    <section class="balance">
+      <div class="text">
+        <p class="intro">My balance</p>
+        <h2 class="money">$921.48</h2>
+      </div>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Circles overlaping each other">
+      </div>
+    </section>
+    <section class="spending">
+      <h2 class="overview">Spending - Last 7 days</h2>
+      <div class="chart">
+        <div class="single-day">
+          <p class="amount"></p>
+          <div class="column"></div>
+          <p class="day">mon</p>
+        </div>
+        <div class="single-day">
+          <p class="amount"></p>
+          <div class="column"></div>
+          <p class="day">tue</p>
+        </div>
+        <div class="single-day current">
+          <p class="amount"></p>
+          <div class="column"></div>
+          <p class="day">wed</p>
+        </div>
+        <div class="single-day">
+          <p class="amount"></p>
+          <div class="column"></div>
+          <p class="day">thu</p>
+        </div>
+        <div class="single-day">
+          <p class="amount"></p>
+          <div class="column"></div>
+          <p class="day">fri</p>
+        </div>
+        <div class="single-day">
+          <p class="amount"></p>
+          <div class="column"></div>
+          <p class="day">sat</p>
+        </div>
+        <div class="single-day">
+          <p class="amount"></p>
+          <div class="column"></div>
+          <p class="day">sun</p>
+        </div>
+      </div>
+
+      <div class="summary">
+        <p class="title">Total this month</p>
+        <div class="content">
+          <h2 class="money">$478.33</h2>
+          <div class="differ">
+            <p class="percent">+2.4%</p>
+            <p class="time">from last month</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
