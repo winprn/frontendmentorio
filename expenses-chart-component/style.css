@@ -114,7 +114,7 @@ main {
     transform: translateY(-0.6rem);
 }
 
-.single-day.current .column {
+.single-day .column.current {
     background-color: hsl(186, 34%, 60%);
 }
 
