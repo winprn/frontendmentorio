@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(217, 12%, 63%);
+}
+
+.rating, .thank-you {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 12px;
+    /* box-shadow: 0px 2px 14px rgba(255, 255, 255, 0.2); */
+    padding: 2rem 2rem;
+}
+
+.stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.heading {
+    font-size: 3rem;
+}
+
+.star {
+    height: 3.8rem;
+    width: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.title {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 1.4rem;
+}
+
+.more-info {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    opacity: 0.7;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(217, 12%, 63%);
+    font-size: 1.4rem;
+    background-color: hsla(216, 12%, 54%, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option:hover {
+    background-color: hsl(25, 97%, 53%) !important;
+    color: #fff;
+}
+
+.option.selected {
+    color: #fff;
+    background-color: hsl(216, 12%, 54%);
+}
+
+.btn {
+    border: none;
+    padding: 1.2rem;
+    border-radius: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background-color: hsl(25, 97%, 53%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: #fff;
+}
+
+.err {
+    color: red;
+    font-size: 1.4rem;
+}
+
+.disappear {
+    display: none;
+}
+
+.thank-you {
+    align-items: center;
+}
+
+.summary {
+    font-size: 1.6rem;
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(215, 11%, 31%);
+    height: 3.2rem;
+    width: 19rem;
+    border-radius: 100px;
+    font-weight: 400;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer .heading {
+    color: #fff;
+    font-weight: 700;
+}
+
+.info {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
