@@ -1,0 +1,63 @@
+@import './variables.scss';
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    // height: 25rem;
+    width: 35rem;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+
+    .card-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $very-dark-blue;
+        margin-bottom: 1rem;
+    }
+
+    .card-content {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $grayish-blue;
+        margin-bottom: 3rem;
+    }
+
+    .card-img {
+        align-self: flex-end;
+        img {
+            height: 6rem;
+            display: block;
+        }
+    }
+}
+
+.cyan {
+    border-top: 4px solid $cyan;
+}
+
+.red {
+    border-top: 4px solid $red;
+}
+
+.orange {
+    border-top: 4px solid $orange;
+}
+
+.blue {
+    border-top: 4px solid $blue;
+}
+
+.double.first {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.double.second {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+}
+
+.single {
+    grid-row: 2 / span 2;
+}
