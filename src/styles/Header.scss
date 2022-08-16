@@ -1,0 +1,179 @@
+@import './Variables.scss';
+
+.header {
+    padding: 2rem 4rem;
+    margin-bottom: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .group {
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+    }
+
+    .join {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        font-size: 1.6rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        gap: 3rem;
+        font-size: 1.6rem;
+
+        .contain {
+            position: relative;
+
+            .dropdown-menu {
+                opacity: 0;
+                pointer-events: none;
+                visibility: hidden;
+                // display: none;
+                position: absolute;
+                margin-top: 1.6rem;
+                transform: translate(-50%, -2rem);
+                transition: all 0.3s;
+                top: 0.8rem;
+                left: 50%;
+                background-color: #fff;
+                border-radius: 8px;
+                width: max-content;
+                padding: 2rem 3rem;
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    
+                .dropdown-items {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+                    width: 100%;
+    
+                    .dropdown-item {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        gap: 1rem;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            .dropdown-menu.active {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                // display: block;
+                transform: translate(-50%, 0);
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        width: 100vw;
+
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+            position: absolute;
+            right: 2rem;
+            z-index: 999;
+        }
+
+        .container {
+            position: absolute;
+            background-color: #fff;
+            height: 100vh;
+            width: 65vw;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 2rem;
+            margin-top: 8rem;
+            font-size: 2rem;
+            gap: 2rem;
+
+            .contain {
+                display: flex;
+                flex-direction: column;
+                // gap: 1.2rem;
+
+                .dropdown-menu {
+                    display: none;
+                    // margin-top: 1.6rem;
+                    background-color: #fff;
+                    width: max-content;
+                    padding: 2rem 3rem;
+        
+                    .dropdown-items {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 1.6rem;
+                        width: 100%;
+                        font-size: 1.8rem;
+        
+                        .dropdown-item {
+                            display: flex;
+                            width: 100%;
+                            align-items: center;
+                            gap: 1rem;
+                        }
+                    }
+                }
+    
+                .dropdown-menu.active {
+                    display: block;
+                }
+            }
+
+            .join {
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                align-items: center;
+                width: 100%;
+
+                .button {
+                    display: block !important;
+                    width: 65%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .black {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 100vh;
+            width: 35vw;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .join {
+            display: none;
+        }
+    }
+}

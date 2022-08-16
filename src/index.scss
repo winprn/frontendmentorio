@@ -1,0 +1,35 @@
+@import './styles/Variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  // overflow: hidden;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  color: $medium-gray;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: $medium-gray;
+  display: inline-block;
+  // display: inline;
+  transition: all 0.3s;
+}
+
+a:hover, a:active {
+  color: $almost-black;
+}
+
+.button {
+  border-radius: 12px;
+  border: 1px solid ;
+  padding: 1.2rem 1.6rem;
+}
