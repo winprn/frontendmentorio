@@ -1,0 +1,141 @@
+@import '../styles/Variables.scss';
+
+header {
+    width: clamp(36rem, 90%, 54rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    h3 {
+        font-size: 2.8rem;
+        align-self: flex-end;
+    }
+
+    .theme {
+        display: flex;
+        gap: 1.4rem;
+        align-items: flex-end;
+        text-transform: uppercase;
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .select-theme {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-self: flex-start;
+            align-items: center;
+            // gap: 1rem;
+            padding: 0 1rem;
+
+            &:before {
+                content: '  ';
+                position: absolute;
+                top: 2.2rem;
+                left: 50%;
+                transform: translateX(-46%);
+                z-index: -99;
+                width: 82%;
+                height: 2rem;
+                background: $keypad-bg;
+                border-radius: 100px;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                label {
+                    display: inline-block;
+                    width: 2rem;
+                    padding: 1rem;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: color 200ms ease-out;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                input[type="radio"] {
+                    &:not(:checked),
+                    &:checked {
+                      opacity: 0;
+                      pointer-events: auto;
+                    }
+                }
+            }
+
+            .indicator {
+                width: 1.5rem;
+                height: 1.5rem;
+                position: absolute;
+                top: 2.45rem;
+                left: 1.4rem;
+                background: $key-equal-bg;
+                border-radius: 50%;
+                transition: left 600ms,
+                            background 500ms;
+                // transform: translateX(-50%);
+            }
+        }
+
+        .select-theme.two {
+            .indicator {
+                background: hsl(25, 98%, 40%);
+                left: 3.55rem;
+            }
+        }
+
+        .select-theme.three {
+            .indicator {
+                background: hsl(176, 100%, 44%);
+                left: 5.7rem;
+            }
+        }
+    }
+}
+
+.theme2 {
+    header {
+        .theme {
+            .select-theme {
+                &:before {
+                    background: $keypad-bg-theme2;
+                }
+                .indicator {
+                    background: $key-equal-bg-theme2;
+                }
+            }
+        }
+    }
+}
+
+.theme3 {
+    header {
+        .theme {
+            .select-theme {
+                &:before {
+                    background: $keypad-bg-theme3;
+                }
+                .indicator {
+                    background: $key-equal-bg-theme3;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        width: 36rem;
+    }
+}
